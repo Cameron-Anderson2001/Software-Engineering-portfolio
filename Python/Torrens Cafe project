@@ -1,0 +1,32 @@
+print("------------------------------")
+print("\t Welcome to Torrens Cafe")
+print("------------------------------")
+
+print("1. Small brekky $10")
+print("4. egg ($0.99)")
+print("5. toast ($0.79)")
+
+
+
+print('\n\n\n<Enter 000 to exit and 111 to finalize the payment>')
+
+
+total=0
+while True:
+    choice=input("Choose your item: ")
+    if int(choice)==1:#or ---->      if choice=="1":
+        Quantity=int(input("Quantity: ")) #Collecting quantity
+        total=total+10*Quantity  #Mulitplying the cost (10) by the quantity
+    elif int(choice)==4:
+        Quantity=int(input("Quantity: "))
+        total=total+0.99*Quantity
+    elif int(choice)==5:
+        Quantity=int(input("Quantity: "))
+        total=total+0.79*Quantity
+    elif (choice)=='000':#quit
+        break
+    elif choice=='111':#finalize payment
+        print("Total: {}".format(total))
+        break
+    else:
+        print('Please enter correct choice') #Saying to use the correct input
